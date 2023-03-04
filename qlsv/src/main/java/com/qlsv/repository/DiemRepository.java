@@ -7,11 +7,10 @@
  ******************************************************************************/
 package com.qlsv.repository;
 
-import org.springframework.data.mirage.repository.MirageRepository;
+import com.qlsv.entity.DiemEntity;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.quanlysinhvien.demo.entity.DiemEntity;
-
-public interface DiemRepository extends MirageRepository<DiemEntity, Long> {
+public interface DiemRepository extends MongoRepository<DiemEntity, Long> {
 //    LpgwMaTable findByCustomerNumer(@Param("customerNumber") String customerNumber);
 //
 //    int countSearchMasterDataMaTable(@Param("searchDto") MasterDataMaTableSearchDto searchDto);

@@ -1,6 +1,6 @@
 package com.qlsv.service.impl;
 
-import com.quanlysinhvien.demo.service.DiemService;
+import com.qlsv.service.ChiTietLopTcService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @AllArgsConstructor
 @Transactional(rollbackFor = Exception.class)
-public class ChiTietLopTcServiceImpl implements DiemService {
+public class ChiTietLopTcServiceImpl implements ChiTietLopTcService {
 //    private final SystemConfig systemConfig;
 //    private final ServletContext servletContext;
 //    private final LpgwMappingBankBinProcRepository lpgwMappingBankBinProcRepository;

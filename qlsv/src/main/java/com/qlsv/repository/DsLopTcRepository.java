@@ -7,11 +7,10 @@
  ******************************************************************************/
 package com.qlsv.repository;
 
-import org.springframework.data.mirage.repository.MirageRepository;
+import com.qlsv.entity.DsLopTcEntity;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.quanlysinhvien.demo.entity.DsLopTcEntity;
-
-public interface DsLopTcRepository extends MirageRepository<DsLopTcEntity, Long> {
+public interface DsLopTcRepository extends MongoRepository<DsLopTcEntity, Long> {
 //    LpgwMaTable findByCustomerNumer(@Param("customerNumber") String customerNumber);
 //
 //    int countSearchMasterDataMaTable(@Param("searchDto") MasterDataMaTableSearchDto searchDto);

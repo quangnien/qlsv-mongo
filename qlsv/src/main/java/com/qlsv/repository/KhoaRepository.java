@@ -7,11 +7,10 @@
  ******************************************************************************/
 package com.qlsv.repository;
 
-import org.springframework.data.mirage.repository.MirageRepository;
+import com.qlsv.entity.KhoaEntity;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.quanlysinhvien.demo.entity.KhoaEntity;
-
-public interface KhoaRepository extends MirageRepository<KhoaEntity, Long> {
+public interface KhoaRepository extends MongoRepository<KhoaEntity, Long> {
 //    LpgwMaTable findByCustomerNumer(@Param("customerNumber") String customerNumber);
 //
 //    int countSearchMasterDataMaTable(@Param("searchDto") MasterDataMaTableSearchDto searchDto);

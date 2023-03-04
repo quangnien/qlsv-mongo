@@ -1,6 +1,6 @@
 package com.qlsv.service.impl;
 
-import com.quanlysinhvien.demo.service.DiemService;
+import com.qlsv.service.DiemService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

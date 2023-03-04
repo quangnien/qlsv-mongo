@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 public class KhoaDto {
 
-	private Long id;
+	private String khoaId;
 	private String maKhoa;
 	private String tenKhoa;
 	private String sdt;
