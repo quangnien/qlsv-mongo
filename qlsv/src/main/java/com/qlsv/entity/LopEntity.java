@@ -15,20 +15,20 @@ import javax.validation.constraints.NotBlank;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LopEntity {
-	
+
 	@Id
-	private Long id;
-	
+	private String id;
+
 	@Indexed(unique = true)
 	@NotBlank(message = "Vui Lòng Nhập Mã Lớp")
 	@Length(min = 4 , message = "Mã lớp chứa ít nhất 4 ký tự!")
 	private String maLop;
-	
+
 	@NotBlank(message = "Vui Lòng Nhập Mã Khoa")
 	@Length(min = 4 , message = "Mã lớp chứa ít nhất 4 ký tự!")
 	private String tenLop;
 
 	/* FOREIGN KEY */
-	private Long makhoaId;
+	private String makhoa;
 
 }

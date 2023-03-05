@@ -17,7 +17,7 @@ import javax.validation.constraints.NotBlank;
 public class MonHocEntity {
 	
 	@Id
-	private Long id;
+	private String id;
 	
 	@Indexed(unique = true)
 	@NotBlank(message = "Vui Lòng Nhập Mã Môn Học")

@@ -14,11 +14,12 @@ import javax.validation.constraints.NotBlank;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@CompoundIndex(def = "{'masvId': 1, 'maloptcId': 1}", unique = true)
+@CompoundIndex(def = "{'maSv': 1, 'maLopTc': 1}", unique = true)
 public class DiemEntity {
 	
 	@Id
-	private Long id;
+	private String id;
+
 	private float cc;
 	private float gk;
 	private float ck;
@@ -28,8 +29,8 @@ public class DiemEntity {
 	private String xepLoai;
 
 	/* FOREIGN KEY */
-	private Long masvId;
+	private String maSv;
 	
-	private Long maloptcId;
+	private String maLopTc;
 	
 }

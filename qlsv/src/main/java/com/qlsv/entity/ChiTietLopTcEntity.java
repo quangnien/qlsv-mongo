@@ -14,11 +14,11 @@ import javax.validation.constraints.NotBlank;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@CompoundIndex(def = "{'maloptcId': 1, 'tiet': 1, 'thu': 1}", unique = true)
+@CompoundIndex(def = "{'maLopTc': 1, 'tiet': 1, 'thu': 1}", unique = true)
 public class ChiTietLopTcEntity {
 	
 	@Id
-	private Long id;
+	private String id;
 
 	private int tiet;
 	
@@ -33,6 +33,6 @@ public class ChiTietLopTcEntity {
 	private String Phong;
 	
 	/* FOREIGN KEY */
-	private Long maloptcId;
+	private String maLopTc;
 
 }

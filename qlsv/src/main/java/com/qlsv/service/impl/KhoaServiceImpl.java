@@ -5,6 +5,7 @@ import com.qlsv.entity.KhoaEntity;
 import com.qlsv.repository.KhoaRepository;
 import com.qlsv.service.KhoaService;
 import lombok.AllArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,12 +23,19 @@ public class KhoaServiceImpl implements KhoaService {
     @Override
     public KhoaEntity addKhoa(KhoaDto khoa) {
         KhoaEntity result = new KhoaEntity();
-        result.setKhoaId(UUID.randomUUID().toString().split("-")[0]);
+        result.setId(UUID.randomUUID().toString().split("-")[0]);
         result.setMaKhoa(khoa.getMaKhoa());
         result.setTenKhoa(khoa.getTenKhoa());
         result.setSdt(khoa.getSdt());
         result.setEmail(khoa.getEmail());
         return repository.save(result);
+    }
+
+    @Override
+    public KhoaEntity updateKhoa(KhoaDto khoaDto) {
+        ModelMapper modelMapper = new ModelMapper();
+        KhoaEntity khoaEntity = modelMapper.map(khoaDto, KhoaEntity.class);
+        return repository.save(khoaEntity);
     }
 
 
@@ -50,12 +58,12 @@ public class KhoaServiceImpl implements KhoaService {
 //    public KhoaEntity updateTask(KhoaEntity taskRequest){
 //        //get the existing document from DB
 //        // populate new value from request to existing object/entity/document
-//        KhoaEntity existingTask = repository.findById(taskRequest.getTaskId()).get();
-//        existingTask.setDescription(taskRequest.getDescription());
-//        existingTask.setSeverity(taskRequest.getSeverity());
-//        existingTask.setAssignee(taskRequest.getAssignee());
-//        existingTask.setStoryPoint(taskRequest.getStoryPoint());
-//        return repository.save(existingTask);
+//        KhoaEntity existingKhoa = repository.findById(taskRequest.getTaskId()).get();
+//        existingKhoa.setDescription(taskRequest.getDescription());
+//        existingKhoa.setSeverity(taskRequest.getSeverity());
+//        existingKhoa.setAssignee(taskRequest.getAssignee());
+//        existingKhoa.setStoryPoint(taskRequest.getStoryPoint());
+//        return repository.save(existingKhoa);
 //    }
 //
 //    public String deleteTask(String taskId){

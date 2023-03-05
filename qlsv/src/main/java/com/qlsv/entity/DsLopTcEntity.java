@@ -19,7 +19,7 @@ import java.util.Date;
 public class DsLopTcEntity {
 	
 	@Id
-	private Long id;
+	private String id;
 	
 	@NotBlank(message = "Vui Lòng Nhập Mã Lớp Tín Chỉ")
 	@Length(min = 4 , message = "Mã lớp tín chỉ chứa ít nhất 4 ký tự!")
@@ -36,10 +36,10 @@ public class DsLopTcEntity {
 	private Date timeKt;
 	
 	/* FOREIGN KEY */	
-	private Long mamhId;
+	private String maMh;
 	
-	private Long magvId;
+	private String maGv;
 	
-	private Long malopId;
+	private String maLop;
 	
 }

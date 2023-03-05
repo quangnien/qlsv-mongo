@@ -1,19 +1,24 @@
 package com.qlsv.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class DiemDto {
 
-	private Long id;
+	private String id;
+
 	private float cc;
 	private float gk;
 	private float ck;
 	private float tb;
 	private String xepLoai;
-	private int masvId;
-	private SinhVienDto sinhvien;
-	private int maloptcId;
-	private DsLopTcDto dsloptc;
+
+	/* FOREIGN KEY */
+	private String maSv;
+	private String maLopTc;
 	
 }

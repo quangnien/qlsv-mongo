@@ -10,7 +10,7 @@ package com.qlsv.repository;
 import com.qlsv.entity.DiemEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface DiemRepository extends MongoRepository<DiemEntity, Long> {
+public interface DiemRepository extends MongoRepository<DiemEntity, String> {
 //    LpgwMaTable findByCustomerNumer(@Param("customerNumber") String customerNumber);
 //
 //    int countSearchMasterDataMaTable(@Param("searchDto") MasterDataMaTableSearchDto searchDto);

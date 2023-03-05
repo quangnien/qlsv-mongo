@@ -10,7 +10,7 @@ package com.qlsv.repository;
 import com.qlsv.entity.ChiTietLopTcEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface ChiTietLopTcRepository extends MongoRepository<ChiTietLopTcEntity, Long> {
+public interface ChiTietLopTcRepository extends MongoRepository<ChiTietLopTcEntity, String> {
 //    LpgwMaTable findByCustomerNumer(@Param("customerNumber") String customerNumber);
 //
 //    int countSearchMasterDataMaTable(@Param("searchDto") MasterDataMaTableSearchDto searchDto);

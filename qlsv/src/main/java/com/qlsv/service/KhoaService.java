@@ -7,6 +7,7 @@ import com.qlsv.entity.KhoaEntity;
 public interface KhoaService {
 
     public KhoaEntity addKhoa(KhoaDto khoa);
+    public KhoaEntity updateKhoa(KhoaDto khoa);
 
 //    public List<KhoaEntity> findAllTasks();
 //

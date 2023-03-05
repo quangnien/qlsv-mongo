@@ -10,7 +10,7 @@ package com.qlsv.repository;
 import com.qlsv.entity.MonHocEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface MonHocRepository extends MongoRepository<MonHocEntity, Long> {
+public interface MonHocRepository extends MongoRepository<MonHocEntity, String> {
 //    LpgwMaTable findByCustomerNumer(@Param("customerNumber") String customerNumber);
 //
 //    int countSearchMasterDataMaTable(@Param("searchDto") MasterDataMaTableSearchDto searchDto);

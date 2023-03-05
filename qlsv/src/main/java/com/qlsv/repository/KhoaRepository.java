@@ -9,8 +9,15 @@ package com.qlsv.repository;
 
 import com.qlsv.entity.KhoaEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 
-public interface KhoaRepository extends MongoRepository<KhoaEntity, Long> {
+public interface KhoaRepository extends MongoRepository<KhoaEntity, String> {
+
+    int countKhoaByMaKhoa(String maKhoa);
+
+    @Query(value = "{'maKhoa': ?0, '_id': {$ne: ?1}}", count = true)
+    Long countKhoaByMaKhoaAndNotId(String maKhoa, String id);
+
 //    LpgwMaTable findByCustomerNumer(@Param("customerNumber") String customerNumber);
 //
 //    int countSearchMasterDataMaTable(@Param("searchDto") MasterDataMaTableSearchDto searchDto);

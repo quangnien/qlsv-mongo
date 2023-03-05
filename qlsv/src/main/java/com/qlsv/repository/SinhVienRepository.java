@@ -10,7 +10,7 @@ package com.qlsv.repository;
 import com.qlsv.entity.SinhVienEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface SinhVienRepository extends MongoRepository<SinhVienEntity, Long> {
+public interface SinhVienRepository extends MongoRepository<SinhVienEntity, String> {
 //    LpgwMaTable findByCustomerNumer(@Param("customerNumber") String customerNumber);
 //
 //    int countSearchMasterDataMaTable(@Param("searchDto") MasterDataMaTableSearchDto searchDto);

@@ -10,7 +10,7 @@ package com.qlsv.repository;
 import com.qlsv.entity.LopEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface LopRepository extends MongoRepository<LopEntity, Long> {
+public interface LopRepository extends MongoRepository<LopEntity, String> {
 //    LpgwMaTable findByCustomerNumer(@Param("customerNumber") String customerNumber);
 //
 //    int countSearchMasterDataMaTable(@Param("searchDto") MasterDataMaTableSearchDto searchDto);

@@ -1,26 +1,26 @@
 package com.qlsv.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class DsLopTcDto {
 
-	private Long id;
+	private String id;
+
 	private String maLopTc;
 	private int nienKhoa;
 	private int ky;
 	private Date timeBd;
 	private Date timeKt;
-	private int mamhId;
-	private MonHocDto monhoc;
-	private int magvId;
-	private GiangVienDto giangvien;
-	private int malopId;
-	private LopDto lop;
-	private List<DiemDto> diem;
-	private List<ChiTietLopTcDto> chitietloptc;
-	
+
+	/* FOREIGN KEY */
+	private String maMh;
+	private String maGv;
+	private String maLop;
 }

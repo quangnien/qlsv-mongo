@@ -1,14 +1,17 @@
 package com.qlsv.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class GiangVienDto {
 
-	private Long id;
+	private String id;
 	private String maGv;
 	private String ho;
 	private String ten;
@@ -19,7 +22,7 @@ public class GiangVienDto {
 	private String matKhau;
 	private int vaiTro;
 	private String hinhAnh;
-	private int makhoaId;
-	private KhoaDto khoa;
-	private List<DsLopTcDto> dsloptc;
+
+	/* FOREIGN KEY */
+	private String maKhoa;
 }

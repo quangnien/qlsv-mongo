@@ -20,7 +20,7 @@ import java.util.Date;
 public class GiangVienEntity {
 	
 	@Id
-	private Long id;
+	private String id;
 	
 	@Indexed(unique = true)
 	@NotBlank(message = "Vui Lòng Nhập Mã Sinh Viên")
@@ -54,6 +54,6 @@ public class GiangVienEntity {
 	private String hinhAnh;
 	
 	/* FOREIGN KEY */	
-	private Long makhoaId;
+	private String maKhoa;
 	
 }

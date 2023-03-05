@@ -1,17 +1,19 @@
 package com.qlsv.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.util.List;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class LopDto {
 
-	private Long id;
+	private String id;
+
 	private String maLop;
 	private String tenLop;
-	private int makhoaId;
-	private KhoaDto khoa;
-	private List<SinhVienDto> sinhvien;
-	private List<DsLopTcDto> dsloptc;
+
+	/* FOREIGN KEY */
+	private String makhoa;
 }

@@ -19,7 +19,7 @@ import javax.validation.constraints.NotBlank;
 public class KhoaEntity {
 	
 	@Id
-	private String khoaId;
+	private String id;
 	
 	@Indexed(unique = true)
 	@NotBlank(message = "Vui Lòng Nhập Mã Khoa")
